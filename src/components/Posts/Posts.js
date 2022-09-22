@@ -3,7 +3,7 @@ import {
   usePostDispatchContext,
   usePostStateContext,
 } from "../../contexts/PostsContext";
-import { getPosts } from "../../apis/postApi";
+import { getPosts } from "../../contexts/PostsContext";
 import { Post } from "../post/Post";
 
 const Posts = () => {
