@@ -40,6 +40,21 @@ function getPostReducer(state, action) {
         ...state,
         posts: getPostFailded(action.error),
       };
+    case "GET_POST":
+      return {
+        ...state,
+        post: getPostloading,
+      };
+    case "GET_POST_SUCCESS":
+      return {
+        ...state,
+        post: getPostSuccess(action.data),
+      };
+    case "GET_POST_ERROR":
+      return {
+        ...state,
+        post: getPostFailded(action.error),
+      };
     default:
       throw new Error(`Unhandled action type : ${action.type}`);
   }
